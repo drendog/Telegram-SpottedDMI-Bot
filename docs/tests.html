@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tests modules &mdash; Spotted dmi bot  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Database schema" href="dbschema.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Spotted dmi bot
+            <img src="_static/spotted-logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">All modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbschema.html">Database schema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tests modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests"><strong>Description</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.conftest">conftest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.test_bot">test_bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.test_db">tests.test_db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.test_util">test_util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.util">util</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Spotted dmi bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tests modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests-modules">
+<h1>Tests modules<a class="headerlink" href="#tests-modules" title="Permalink to this headline"></a></h1>
+<section id="module-tests">
+<span id="description"></span><h2><strong>Description</strong><a class="headerlink" href="#module-tests" title="Permalink to this headline"></a></h2>
+<p>Tests</p>
+</section>
+<section id="module-tests.conftest">
+<span id="conftest"></span><h2>conftest<a class="headerlink" href="#module-tests.conftest" title="Permalink to this headline"></a></h2>
+<p>Test configuration</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.conftest.init_local_test_db">
+<span class="sig-prename descclassname"><span class="pre">tests.conftest.</span></span><span class="sig-name descname"><span class="pre">init_local_test_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></span><a class="headerlink" href="#tests.conftest.init_local_test_db" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of this class.
+Creates and initializes the local database</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.conftest.setup">
+<span class="sig-prename descclassname"><span class="pre">tests.conftest.</span></span><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.conftest.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Called at the beginning of the testing session.
+Sets up the test configuration</p>
+</dd></dl>
+
+</section>
+<section id="module-tests.test_bot">
+<span id="test-bot"></span><h2>test_bot<a class="headerlink" href="#module-tests.test_bot" title="Permalink to this headline"></a></h2>
+<p>Tests the bot functionality</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">TestBot</span></span><a class="headerlink" href="#tests.test_bot.TestBot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the bot simulating the telegram API’s responses</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestBotAdminCommand</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the bot commands reserved for admins</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_ban_cmd">
+<span class="sig-name descname"><span class="pre">test_ban_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_ban_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /ban command.
+The bot bans the user associated with the pending post</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_clean_pending">
+<span class="sig-name descname"><span class="pre">test_clean_pending</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_clean_pending" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /clean_pending command.
+The bot cleans the old pending posts, while ignoring the more recent ones</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_reply_invalid_cmd">
+<span class="sig-name descname"><span class="pre">test_reply_invalid_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_reply_invalid_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /reply command.
+The bot warns about invalid command</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_reply_post_cmd">
+<span class="sig-name descname"><span class="pre">test_reply_post_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_reply_post_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /reply command.
+The bot sends a message to the user on behalf of the admin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_reply_report_spot_cmd">
+<span class="sig-name descname"><span class="pre">test_reply_report_spot_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_spot_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_reply_report_spot_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /reply command.
+The bot sends a message to the user on behalf of the admin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_reply_report_user_cmd">
+<span class="sig-name descname"><span class="pre">test_reply_report_user_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_user_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_reply_report_user_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /reply command.
+The bot sends a message to the user on behalf of the admin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_sban_cmd">
+<span class="sig-name descname"><span class="pre">test_sban_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_sban_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /sban command.
+The bot sbans the users specified user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotAdminCommand.test_sban_invalid_cmd">
+<span class="sig-name descname"><span class="pre">test_sban_invalid_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotAdminCommand.test_sban_invalid_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /sban command.
+The bot warns about invalid command</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotBasicCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestBotBasicCommand</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotBasicCommand" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the bot commands</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotBasicCommand.test_help_admin_cmd">
+<span class="sig-name descname"><span class="pre">test_help_admin_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotBasicCommand.test_help_admin_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /help command.
+The bot sends the help response to the admins</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotBasicCommand.test_help_user_cmd">
+<span class="sig-name descname"><span class="pre">test_help_user_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotBasicCommand.test_help_user_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /help command.
+The bot sends the help response to the user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotBasicCommand.test_rules_cmd">
+<span class="sig-name descname"><span class="pre">test_rules_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotBasicCommand.test_rules_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /rules command.
+The bot sends the rules response to the user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotBasicCommand.test_start_cmd">
+<span class="sig-name descname"><span class="pre">test_start_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotBasicCommand.test_start_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /start command.
+The bot sends the start response to the user</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestBotSettings</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the settings commands</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings.test_settings_anonym_from_anonym_cmd">
+<span class="sig-name descname"><span class="pre">test_settings_anonym_from_anonym_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings.test_settings_anonym_from_anonym_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /settings command.
+The user becomes anonym already being anonym</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings.test_settings_anonym_from_credited_cmd">
+<span class="sig-name descname"><span class="pre">test_settings_anonym_from_credited_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings.test_settings_anonym_from_credited_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /settings command.
+The user becomes anonym from being credited</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings.test_settings_cmd">
+<span class="sig-name descname"><span class="pre">test_settings_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings.test_settings_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /settings command.
+The bot sends the settings response to the user</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings.test_settings_credited_from_anonym_cmd">
+<span class="sig-name descname"><span class="pre">test_settings_credited_from_anonym_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings.test_settings_credited_from_anonym_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /settings command.
+The user becomes credited from being anonym</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSettings.test_settings_credited_from_credited_cmd">
+<span class="sig-name descname"><span class="pre">test_settings_credited_from_credited_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSettings.test_settings_credited_from_credited_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /settings command.
+The user becomes credited already being credited</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestBotSpotConversation</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the spot conversation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_banned_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_banned_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_banned_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Spot is not allowed for banned users</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_cancel_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_cancel_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_cancel_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Cancel spot conversation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_no_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_no_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_no_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Complete with no the spot conversation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_no_private_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_no_private_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_no_private_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Spot is not allowed in groups</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_pending_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_pending_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_table</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_pending_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Spot is not allowed for users with a pending post</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestBotSpotConversation.test_spot_si_cmd">
+<span class="sig-name descname"><span class="pre">test_spot_si_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestBotSpotConversation.test_spot_si_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Complete with yes the spot conversation</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestComments">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestComments</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestComments" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the comments feature in the channel group</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestComments.test_anonymous_comment_msg">
+<span class="sig-name descname"><span class="pre">test_anonymous_comment_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">published_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestComments.test_anonymous_comment_msg" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the replacement of an anonymous comment.
+Copies the message and deletes the original</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestComments.test_non_anonymous_comment_msg">
+<span class="sig-name descname"><span class="pre">test_non_anonymous_comment_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">published_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestComments.test_non_anonymous_comment_msg" title="Permalink to this definition"></a></dt>
+<dd><p>Tests a public comment.
+The bot should not react to the message if the user is not anonymous</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestPublishSpot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestPublishSpot</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestPublishSpot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the complete publishing spot pipeline</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestPublishSpot.test_spot_pipeline">
+<span class="sig-name descname"><span class="pre">test_spot_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestPublishSpot.test_spot_pipeline" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /spot command.
+Complete with yes the spot conversation</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportSpot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestReportSpot</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportSpot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the report spot commands</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportSpot.test_report_post_again_query">
+<span class="sig-name descname"><span class="pre">test_report_post_again_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">published_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportSpot.test_report_post_again_query" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /report user query.
+The user cannot report again a post already published in the channel</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportSpot.test_report_post_query">
+<span class="sig-name descname"><span class="pre">test_report_post_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">published_post_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportSpot.test_report_post_query" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /report user query.
+The user successfully reports a post already published in the channel</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportUser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestReportUser</span></span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportUser" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the report user commands</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportUser.test_report_user_cmd">
+<span class="sig-name descname"><span class="pre">test_report_user_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportUser.test_report_user_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /report user command.
+The bot sends the report from the user to the admins</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportUser.test_report_user_cooldown_cmd">
+<span class="sig-name descname"><span class="pre">test_report_user_cooldown_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportUser.test_report_user_cooldown_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /report user command’s cooldown timer.
+The user cannot report again for the amount of time enstablished in the settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_bot.TestBot.TestReportUser.test_report_user_invalid_username_cmd">
+<span class="sig-name descname"><span class="pre">test_report_user_invalid_username_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_bot.TestBot.TestReportUser.test_report_user_invalid_username_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the /report user command.
+The username submitted is not a valid Telegram username</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.admin_group">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">admin_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.chat.Chat</span></span></span><a class="headerlink" href="#tests.test_bot.admin_group" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each class.
+Returns the admin group chat</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>admin user</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.channel">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">channel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.chat.Chat</span></span></span><a class="headerlink" href="#tests.test_bot.channel" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each class.
+Returns the channel chat</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>admin user</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.channel_group">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">channel_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.chat.Chat</span></span></span><a class="headerlink" href="#tests.test_bot.channel_group" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each class.
+Returns the chat of the public group with the comments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>admin user</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.local_table">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">local_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_local_test_db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></span><a class="headerlink" href="#tests.test_bot.local_table" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Resets the state of the database</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.pending_post_message">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">pending_post_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.test_bot.pending_post_message" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Simulates an existing pending post</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>pending post message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.published_post_message">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">published_post_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.test_bot.published_post_message" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Simulates an existing published post</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>published post message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.report_spot_message">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">report_spot_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tests.test_bot.report_spot_message" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Simulates an existing spot report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>spot report in the admin group and post in the channel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.report_user_message">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">report_user_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.test_bot.report_user_message" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Simulates an existing user report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>user report message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_bot.telegram">
+<span class="sig-prename descclassname"><span class="pre">tests.test_bot.</span></span><span class="sig-name descname"><span class="pre">telegram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tests.util.TelegramSimulator" title="tests.util.TelegramSimulator"><span class="pre">tests.util.TelegramSimulator</span></a></span></span><a class="headerlink" href="#tests.test_bot.telegram" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of each function.
+Creates a telegram simulator object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>telegram weaver</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tests.test_db">
+<span id="tests-test-db"></span><h2>tests.test_db<a class="headerlink" href="#module-tests.test_db" title="Permalink to this headline"></a></h2>
+<p>Test all the modules related to data management</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_db.TestDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_db.</span></span><span class="sig-name descname"><span class="pre">TestDB</span></span><a class="headerlink" href="#tests.test_db.TestDB" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_count_from">
+<span class="sig-name descname"><span class="pre">test_count_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_count_from" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the count_from function of the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_delete_from">
+<span class="sig-name descname"><span class="pre">test_delete_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_delete_from" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the delete_from function of the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_get_db">
+<span class="sig-name descname"><span class="pre">test_get_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_get_db" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the get_db function for the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_insert_into">
+<span class="sig-name descname"><span class="pre">test_insert_into</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_insert_into" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the insert_into function of the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_query_from_string">
+<span class="sig-name descname"><span class="pre">test_query_from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_query_from_string" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the query_from_string function for the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_select_from">
+<span class="sig-name descname"><span class="pre">test_select_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_select_from" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the select_from function of the database</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_db.TestDB.test_update_from">
+<span class="sig-name descname"><span class="pre">test_update_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_results</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_db.TestDB.test_update_from" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the update_from function of the database</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_db.db_results">
+<span class="sig-prename descclassname"><span class="pre">tests.test_db.</span></span><span class="sig-name descname"><span class="pre">db_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_local_test_db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.data.html#modules.data.db_manager.DbManager" title="modules.data.db_manager.DbManager"><span class="pre">modules.data.db_manager.DbManager</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#tests.test_db.db_results" title="Permalink to this definition"></a></dt>
+<dd><p>Called at the beginning of the testing session.
+Creates initializes the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>Iterator[dict]</em> – dictionary containing the results for the test queries</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tests.test_util">
+<span id="test-util"></span><h2>test_util<a class="headerlink" href="#module-tests.test_util" title="Permalink to this headline"></a></h2>
+<p>Tests the utility package</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_util.TestUtil">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">TestUtil</span></span><a class="headerlink" href="#tests.test_util.TestUtil" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the utilities</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_util.TestUtil.TestInfoUtil">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestInfoUtil</span></span><a class="headerlink" href="#tests.test_util.TestUtil.TestInfoUtil" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tests the EventInfo class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_util.TestUtil.TestInfoUtil.test_callback_info">
+<span class="sig-name descname"><span class="pre">test_callback_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.update.Update</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.ext.callbackcontext.CallbackContext</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_callback_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.callbackquery.CallbackQuery</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_util.TestUtil.TestInfoUtil.test_callback_info" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the <code class="xref py py-meth docutils literal notranslate"><span class="pre">from_callback()</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">EventInfo</span></code> initialization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_util.TestUtil.TestInfoUtil.test_job_info">
+<span class="sig-name descname"><span class="pre">test_job_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_util.TestUtil.TestInfoUtil.test_job_info" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the <code class="xref py py-meth docutils literal notranslate"><span class="pre">from_job()</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">EventInfo</span></code> initialization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_util.TestUtil.TestInfoUtil.test_message_info">
+<span class="sig-name descname"><span class="pre">test_message_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.update.Update</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.ext.callbackcontext.CallbackContext</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_util.TestUtil.TestInfoUtil.test_message_info" title="Permalink to this definition"></a></dt>
+<dd><p>Tests the <code class="xref py py-meth docutils literal notranslate"><span class="pre">from_message()</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">EventInfo</span></code> initialization</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.callback_update">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">callback_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updater</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.updater.Updater</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_callback_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.callbackquery.CallbackQuery</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.update.Update</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.ext.callbackcontext.CallbackContext</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tests.test_util.callback_update" title="Permalink to this definition"></a></dt>
+<dd><p>Simulates a callback query update</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>update and callback context</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.get_callback_query">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">get_callback_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.callbackquery.CallbackQuery</span></span></span><a class="headerlink" href="#tests.test_util.get_callback_query" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a test callback query</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.get_chat">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">get_chat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.chat.Chat</span></span></span><a class="headerlink" href="#tests.test_util.get_chat" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a test chat</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.get_message">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">get_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">get_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.user.User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.chat.Chat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.test_util.get_message" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a test message</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.get_user">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">get_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.user.User</span></span></span><a class="headerlink" href="#tests.test_util.get_user" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a test user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.job_update">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">job_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updater</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.updater.Updater</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></span><a class="headerlink" href="#tests.test_util.job_update" title="Permalink to this definition"></a></dt>
+<dd><p>Simulates a job update</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>callback context</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.message_update">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">message_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updater</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.updater.Updater</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.update.Update</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.ext.callbackcontext.CallbackContext</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tests.test_util.message_update" title="Permalink to this definition"></a></dt>
+<dd><p>Simulates a message update</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>update and callback context</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.test_util.updater">
+<span class="sig-prename descclassname"><span class="pre">tests.test_util.</span></span><span class="sig-name descname"><span class="pre">updater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.ext.updater.Updater</span></span></span><a class="headerlink" href="#tests.test_util.updater" title="Permalink to this definition"></a></dt>
+<dd><p>Called once per at the beginning of this class.
+Creates a new Updater for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p>telegram updater</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tests.util">
+<span id="util"></span><h2>util<a class="headerlink" href="#module-tests.util" title="Permalink to this headline"></a></h2>
+<p>TelegramSimulator class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.util.</span></span><span class="sig-name descname"><span class="pre">TelegramSimulator</span></span><a class="headerlink" href="#tests.util.TelegramSimulator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Weaves the standard bot class to intercept any contact with the telegram api and store the message</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.add_message">
+<span class="sig-name descname"><span class="pre">add_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.add_message" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a message to the list of messages</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – message to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.chat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">telegram.chat.Chat</span></em><a class="headerlink" href="#tests.util.TelegramSimulator.chat" title="Permalink to this definition"></a></dt>
+<dd><p>Placeholder chat used in every operation</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.current_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#tests.util.TelegramSimulator.current_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current message id and increses it by one</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.get_callback_query_data">
+<span class="sig-name descname"><span class="pre">get_callback_query_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.get_callback_query_data" title="Permalink to this definition"></a></dt>
+<dd><p>Returs the data of the callback query from the inline button with the given text from the given message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – text of the inline button</p></li>
+<li><p><strong>message</strong> – message to extract the data from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>data of the callback query, or an empty string if no data was found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.get_message_with_id">
+<span class="sig-name descname"><span class="pre">get_message_with_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.get_message_with_id" title="Permalink to this definition"></a></dt>
+<dd><p>Return the first message with the given message id or None if no message with this id was found</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message_id</strong> – message id to search for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message with the given message id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.last_message">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">telegram.message.Message</span></em><a class="headerlink" href="#tests.util.TelegramSimulator.last_message" title="Permalink to this definition"></a></dt>
+<dd><p>Last message registered</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.make_callback_query">
+<span class="sig-name descname"><span class="pre">make_callback_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.message.Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.make_callback_query" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a telegram message from the given parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – message text</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>data</strong> – data contained in the callback query. Defaults to None.</p></li>
+<li><p><strong>message</strong> – message the callback query belongs to. Defaults to None.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message created from the given parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.make_message">
+<span class="sig-name descname"><span class="pre">make_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.datetime</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.make_message" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a telegram message from the given parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – message text</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>date</strong> – date when the message was sent. Defaults to None.</p></li>
+<li><p><strong>reply_markup</strong> – reply markup to use. Defaults to None.</p></li>
+<li><p><strong>reply_to_message</strong> – message (or message_id of said message) to reply to. Defaults to None.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message created from the given parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.make_update">
+<span class="sig-name descname"><span class="pre">make_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.callbackquery.CallbackQuery</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edited</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.make_update" title="Permalink to this definition"></a></dt>
+<dd><p>Testing utility factory to create an update from a user event, as either a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Message`</span></code> or a <code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackQuery</span></code> from an inline keyboard</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – either a <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code> or a <code class="xref py py-class docutils literal notranslate"><span class="pre">CallbackQuery</span></code> from an inline keyboard</p></li>
+<li><p><strong>edited</strong> – whether the message should be stored as an edited message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>update with the given message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Resets the telegram wrapper values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.send_callback_query">
+<span class="sig-name descname"><span class="pre">send_callback_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.callbackquery.CallbackQuery</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.callbackquery.CallbackQuery</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.send_callback_query" title="Permalink to this definition"></a></dt>
+<dd><p>Sends a callback query on an inline keyboard button to the bot on behalf of the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – data of the callback query. Must be specified is message is None. Defaults to None</p></li>
+<li><p><strong>query</strong> – query to send. Must be specified is text is None. Defaults to None</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>message</strong> – message the callback query belongs to. Defaults to None.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>callback query answered</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.send_command">
+<span class="sig-name descname"><span class="pre">send_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.datetime</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.send_command" title="Permalink to this definition"></a></dt>
+<dd><p>Sends a command to the bot on behalf of the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – message text. Must be specified is message is None. Defaults to None</p></li>
+<li><p><strong>message</strong> – message to send. Must be specified is text is None. Defaults to None</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>date</strong> – date when the message was sent. Defaults to None.</p></li>
+<li><p><strong>reply_markup</strong> – reply markup to use. Defaults to None.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.send_forward_message">
+<span class="sig-name descname"><span class="pre">send_forward_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forward_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.datetime</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_automatic_forward</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.send_forward_message" title="Permalink to this definition"></a></dt>
+<dd><p>Sends a message to the bot on behalf of the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>forward_message</strong> – message to forward. Must be specified is message is None. Defaults to None</p></li>
+<li><p><strong>message</strong> – message to send. Must be specified is text is None. Defaults to None</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>date</strong> – date when the message was sent. Defaults to None.</p></li>
+<li><p><strong>reply_markup</strong> – reply markup to use. Defaults to None.</p></li>
+<li><p><strong>reply_to_message</strong> – message (or message_id of said message) to reply to. Defaults to None.</p></li>
+<li><p><strong>is_automatic_forward</strong> – whether the message was forwarded automatically by telegram. Defaults to False.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.user.User</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.chat.Chat</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.datetime</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">telegram.message.Message</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.message.Message</span></span></span><a class="headerlink" href="#tests.util.TelegramSimulator.send_message" title="Permalink to this definition"></a></dt>
+<dd><p>Sends a message to the bot on behalf of the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – message text. Must be specified is message is None. Defaults to None</p></li>
+<li><p><strong>message</strong> – message to send. Must be specified is text is None. Defaults to None</p></li>
+<li><p><strong>user</strong> – user who sent the message. Defaults to None.</p></li>
+<li><p><strong>chat</strong> – chat where the message was sent. Defaults to None.</p></li>
+<li><p><strong>date</strong> – date when the message was sent. Defaults to None.</p></li>
+<li><p><strong>reply_markup</strong> – reply markup to use. Defaults to None.</p></li>
+<li><p><strong>reply_to_message</strong> – message (or message_id of said message) to reply to. Defaults to None.</p></li>
+<li><p><strong>**kwargs</strong> – additional parameters to be passed to the message. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.user">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">telegram.user.User</span></em><a class="headerlink" href="#tests.util.TelegramSimulator.user" title="Permalink to this definition"></a></dt>
+<dd><p>Placeholder user used in every operation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.weaved_copy_message">
+<span class="sig-name descname"><span class="pre">weaved_copy_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.weaved_copy_message" title="Permalink to this definition"></a></dt>
+<dd><p>Weaves the post method in the bot object to intercept telegram’s api requests</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.weaved_delete_webhook">
+<span class="sig-name descname"><span class="pre">weaved_delete_webhook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.weaved_delete_webhook" title="Permalink to this definition"></a></dt>
+<dd><p>Weaves the delete_webhook method in the bot object to intercept telegram’s api requests</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.weaved_get_chat">
+<span class="sig-name descname"><span class="pre">weaved_get_chat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.weaved_get_chat" title="Permalink to this definition"></a></dt>
+<dd><p>Weaves the get_chat method in the bot object to intercept telegram’s api requests</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.weaved_message">
+<span class="sig-name descname"><span class="pre">weaved_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.weaved_message" title="Permalink to this definition"></a></dt>
+<dd><p>Weaves the _message method in the bot object to intercept telegram’s api requests</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.util.TelegramSimulator.weaved_post">
+<span class="sig-name descname"><span class="pre">weaved_post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.util.TelegramSimulator.weaved_post" title="Permalink to this definition"></a></dt>
+<dd><p>Weaves the post method in the bot object to intercept telegram’s api requests</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dbschema.html" class="btn btn-neutral float-left" title="Database schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Tend, drendog, alepiaz, Helias.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

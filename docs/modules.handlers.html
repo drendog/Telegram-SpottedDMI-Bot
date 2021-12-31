@@ -1,75 +1,36 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Handlers modules &mdash; Spotted dmi bot  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/dark.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/dark.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Utils modules" href="modules.utils.html" />
     <link rel="prev" title="Debug Modules" href="modules.debug.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Spotted dmi bot
-          
-
-          
-            
             <img src="_static/spotted-logo.jpg" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,113 +38,96 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">All modules</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="modules.data.html">Data modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modules.debug.html">Debug Modules</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Handlers modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.ban">ban</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.callback_handlers">callback_handlers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.command_handlers">command_handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.cancel">cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.clean_pending">clean_pending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.db_backup">db_backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.constants">constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.forwarded_post">forwarded_post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.help">help</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.job_handlers">job_handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.purge">purge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.reply">reply</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.report_spot">report_spot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.report_user">report_user</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.rules">rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.sban">sban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.settings">settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.spot">spot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.start">start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.stats">stats</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="modules.utils.html">Utils modules</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dbschema.html">Database schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests modules</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Spotted dmi bot</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="modules.html">All modules</a> &raquo;</li>
-        
       <li>Handlers modules</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/modules.handlers.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="handlers-modules">
-<h1>Handlers modules<a class="headerlink" href="#handlers-modules" title="Permalink to this headline">¶</a></h1>
+<h1>Handlers modules<a class="headerlink" href="#handlers-modules" title="Permalink to this headline"></a></h1>
 <p><strong>Description</strong></p>
 <span class="target" id="module-modules.handlers"></span><p>Modules that handle the events the bot recognizes and reacts to</p>
+<section id="module-modules.handlers.ban">
+<span id="ban"></span><h2>ban<a class="headerlink" href="#module-modules.handlers.ban" title="Permalink to this headline"></a></h2>
+<p>/ban command</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.ban.ban_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.ban.</span></span><span class="sig-name descname"><span class="pre">ban_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.ban.ban_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the /ban command.
+Ban a user by replying to one of his pending posts with /ban</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-modules.handlers.callback_handlers">
-<span id="callback-handlers"></span><h2>callback_handlers<a class="headerlink" href="#module-modules.handlers.callback_handlers" title="Permalink to this headline">¶</a></h2>
+<span id="callback-handlers"></span><h2>callback_handlers<a class="headerlink" href="#module-modules.handlers.callback_handlers" title="Permalink to this headline"></a></h2>
 <p>Handles the execution of callbacks by the bot</p>
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.approve_no_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">approve_no_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.approve_no_callback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.approve_no_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">approve_no_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.approve_no_callback" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the approve_no callback.
 Rejects the post, deleting it from the pending_post table</p>
 <dl class="field-list simple">
@@ -200,8 +144,29 @@ Rejects the post, deleting it from the pending_post table</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.approve_yes_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">approve_yes_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.approve_yes_callback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.approve_status_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">approve_status_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.approve_status_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the approve_status callback.
+Pauses or resume voting on a specific pending post</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>info</strong> (<em>dict</em>) – information about the callback</p></li>
+<li><p><strong>arg</strong> (<em>str</em>) – [ pause | play ]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text and replyMarkup that make up the reply, new conversation state</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[str, InlineKeyboardMarkup, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.approve_yes_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">approve_yes_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.approve_yes_callback" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the approve_yes callback.
 Approves the post, deleting it from the pending_post table, publishing it in the channel     and putting it in the published post table</p>
 <dl class="field-list simple">
@@ -218,83 +183,8 @@ Approves the post, deleting it from the pending_post table, publishing it in the
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.avg_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">avg_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#modules.handlers.callback_handlers.avg_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the avg_[ votes | 0 | 1 ] callback.
-Shows the average of the %arg per post</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ votes | 0 | 1 ]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>text for the reply</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.close_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">close_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#modules.handlers.callback_handlers.close_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the close callback
-Closes the stats menu</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>text and replyMarkup that make up the reply</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.confirm_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">confirm_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.confirm_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the confirm,[ yes | no ] callback.</p>
-<ul class="simple">
-<li><p>yes: Saves the post as pending and sends it to the admins for them to check.</p></li>
-<li><p>no: cancel the current spot conversation</p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>info</strong> (<em>dict</em>) – information about the callback</p></li>
-<li><p><strong>arg</strong> (<em>str</em>) – [ yes | no ]</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>text and replyMarkup that make up the reply, new conversation state</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple[str, InlineKeyboardMarkup, int]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.max_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">max_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#modules.handlers.callback_handlers.max_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the max_[ votes | 0 | 1 ] callback
-Shows the post with the most %arg</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ votes | 0 | 1 ]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>text for the reply</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.meme_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">meme_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.callback_handlers.meme_callback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.meme_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">meme_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.meme_callback" title="Permalink to this definition"></a></dt>
 <dd><p>Passes the meme callback to the correct handler</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -313,8 +203,8 @@ Shows the post with the most %arg</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.old_reactions">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">old_reactions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#modules.handlers.callback_handlers.old_reactions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.old_reactions">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">old_reactions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.old_reactions" title="Permalink to this definition"></a></dt>
 <dd><p>Used to mantain compatibility with the old reactions.
 Can be removed later</p>
 <dl class="field-list simple">
@@ -331,28 +221,8 @@ Can be removed later</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.report_spot_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">report_spot_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.report_spot_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the report callback.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>info</strong> (<em>dict</em>) – information about the callback</p></li>
-<li><p><strong>arg</strong> (<em>str</em>) – unused</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>text and replyMarkup that make up the reply, new conversation state</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple[str, InlineKeyboardMarkup, int]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.settings_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">settings_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.settings_callback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.settings_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">settings_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.settings_callback" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the settings,[ anonimo | credit ] callback.</p>
 <ul class="simple">
 <li><p>anonimo: Removes the user_id from the table of credited users, if present.</p></li>
@@ -375,40 +245,8 @@ Can be removed later</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.callback_handlers.stats_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">stats_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.callback_handlers.stats_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Passes the stats callback to the correct handler</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
-<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.tot_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">tot_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#modules.handlers.callback_handlers.tot_callback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the tot_[ posts | votes | 0 | 1 ] callback
-Shows the total number of %arg</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ posts | votes | 0 | 1 ]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>text for the reply</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.callback_handlers.vote_callback">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></code><code class="sig-name descname"><span class="pre">vote_callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#modules.handlers.callback_handlers.vote_callback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.callback_handlers.vote_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.callback_handlers.</span></span><span class="sig-name descname"><span class="pre">vote_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="modules.utils.html#modules.utils.info_util.EventInfo" title="modules.utils.info_util.EventInfo"><span class="pre">modules.utils.info_util.EventInfo</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">telegram.inline.inlinekeyboardmarkup.InlineKeyboardMarkup</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#modules.handlers.callback_handlers.vote_callback" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the vote,[ 0 | 1 | 2 | 3 | 4 ] callback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -427,27 +265,12 @@ Shows the total number of %arg</p>
 </dd></dl>
 
 </section>
-<section id="module-modules.handlers.command_handlers">
-<span id="command-handlers"></span><h2>command_handlers<a class="headerlink" href="#module-modules.handlers.command_handlers" title="Permalink to this headline">¶</a></h2>
-<p>Handles the execution of commands by the bot</p>
+<section id="module-modules.handlers.cancel">
+<span id="cancel"></span><h2>cancel<a class="headerlink" href="#module-modules.handlers.cancel" title="Permalink to this headline"></a></h2>
+<p>/cancel command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.ban_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">ban_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.ban_cmd" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the /ban command.
-Ban a user by replying to one of his pending posts with /ban</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
-<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.command_handlers.cancel_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">cancel_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.cancel_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.cancel.cancel_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.cancel.</span></span><span class="sig-name descname"><span class="pre">cancel_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.cancel.cancel_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /cancel command.
 Exits from the post pipeline and removes the eventual pending post of the user</p>
 <dl class="field-list simple">
@@ -466,9 +289,13 @@ Exits from the post pipeline and removes the eventual pending post of the user</
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.clean_pending">
+<span id="clean-pending"></span><h2>clean_pending<a class="headerlink" href="#module-modules.handlers.clean_pending" title="Permalink to this headline"></a></h2>
+<p>/clean_pending command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.clean_pending_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">clean_pending_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.clean_pending_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.clean_pending.clean_pending_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.clean_pending.</span></span><span class="sig-name descname"><span class="pre">clean_pending_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.clean_pending.clean_pending_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /clean_pending command.
 Automatically rejects all pending posts that are older than the chosen amount of hours</p>
 <dl class="field-list simple">
@@ -481,9 +308,36 @@ Automatically rejects all pending posts that are older than the chosen amount of
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.db_backup">
+<span id="db-backup"></span><h2>db_backup<a class="headerlink" href="#module-modules.handlers.db_backup" title="Permalink to this headline"></a></h2>
+<p>/db_backup command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.forwarded_post_msg">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">forwarded_post_msg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.forwarded_post_msg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.db_backup.db_backup_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.db_backup.</span></span><span class="sig-name descname"><span class="pre">db_backup_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.db_backup.db_backup_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the /db_backup command.
+Automatically upload and send current version of db for backup</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-modules.handlers.constants">
+<span id="constants"></span><h2>constants<a class="headerlink" href="#module-modules.handlers.constants" title="Permalink to this headline"></a></h2>
+<p>Constants used by the bot handlers</p>
+</section>
+<section id="module-modules.handlers.forwarded_post">
+<span id="forwarded-post"></span><h2>forwarded_post<a class="headerlink" href="#module-modules.handlers.forwarded_post" title="Permalink to this headline"></a></h2>
+<p>Message forwarded by the telegram channel</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.forwarded_post.forwarded_post_msg">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.forwarded_post.</span></span><span class="sig-name descname"><span class="pre">forwarded_post_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.forwarded_post.forwarded_post_msg" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the post forwarded in the channel group.
 Sends a reply in the channel group and stores it in the database, so that the post can be voted</p>
 <dl class="field-list simple">
@@ -496,9 +350,13 @@ Sends a reply in the channel group and stores it in the database, so that the po
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.help">
+<span id="help"></span><h2>help<a class="headerlink" href="#module-modules.handlers.help" title="Permalink to this headline"></a></h2>
+<p>/help command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.help_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">help_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.help_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.help.help_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.help.</span></span><span class="sig-name descname"><span class="pre">help_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.help.help_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /help command.
 Sends an help message</p>
 <dl class="field-list simple">
@@ -511,11 +369,43 @@ Sends an help message</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.job_handlers">
+<span id="job-handlers"></span><h2>job_handlers<a class="headerlink" href="#module-modules.handlers.job_handlers" title="Permalink to this headline"></a></h2>
+<p>Scheduled jobs of the bot</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.post_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">post_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.post_cmd" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the /post command.
-Checks that the user is in a private chat and it’s not banned and start the post conversation</p>
+<dt class="sig sig-object py" id="modules.handlers.job_handlers.clean_pending_job">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.job_handlers.</span></span><span class="sig-name descname"><span class="pre">clean_pending_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.job_handlers.clean_pending_job" title="Permalink to this definition"></a></dt>
+<dd><p>Job called each day at 05:00 utc.
+Automatically rejects all pending posts that are older than the chosen amount of hours</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the jobqueue</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.job_handlers.db_backup_job">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.job_handlers.</span></span><span class="sig-name descname"><span class="pre">db_backup_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.job_handlers.db_backup_job" title="Permalink to this definition"></a></dt>
+<dd><p>Job called each day at 05:00 utc.
+Automatically upload and send last version of db for backup</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the jobqueue</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-modules.handlers.purge">
+<span id="purge"></span><h2>purge<a class="headerlink" href="#module-modules.handlers.purge" title="Permalink to this headline"></a></h2>
+<p>/purge command</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.purge.purge_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.purge.</span></span><span class="sig-name descname"><span class="pre">purge_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.purge.purge_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the /purge command.
+Deletes all posts and the related votes in the database whose actual telegram message could not be found</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -523,39 +413,16 @@ Checks that the user is in a private chat and it’s not banned and start the po
 <li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>next state of the conversation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.reply">
+<span id="reply"></span><h2>reply<a class="headerlink" href="#module-modules.handlers.reply" title="Permalink to this headline"></a></h2>
+<p>/reply command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.post_msg">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">post_msg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.post_msg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the reply to the /post command.
-Checks the message the user wants to post, and goes to the final step</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
-<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>next state of the conversation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="modules.handlers.command_handlers.reply_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">reply_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.reply_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.reply.reply_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.reply.</span></span><span class="sig-name descname"><span class="pre">reply_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.reply.reply_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /reply command.
 Send a message to a user by replying to one of his pending posts with /reply + the message you want to send</p>
 <dl class="field-list simple">
@@ -568,9 +435,76 @@ Send a message to a user by replying to one of his pending posts with /reply + t
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.report_spot">
+<span id="report-spot"></span><h2>report_spot<a class="headerlink" href="#module-modules.handlers.report_spot" title="Permalink to this headline"></a></h2>
+<p>report callback</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.report_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">report_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.report_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.report_spot.report_spot_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_spot.</span></span><span class="sig-name descname"><span class="pre">report_spot_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.report_spot.report_spot_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the report callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>next state of the conversation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.report_spot.report_spot_conv_handler">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_spot.</span></span><span class="sig-name descname"><span class="pre">report_spot_conv_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.ext.commandhandler.CommandHandler</span></span></span><a class="headerlink" href="#modules.handlers.report_spot.report_spot_conv_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the report (user) conversation handler.
+The states are:</p>
+<ul class="simple">
+<li><p>reporting_spot: submit the reason of the report. Expects text</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>conversaton handler</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>CommandHandler</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.report_spot.report_spot_msg">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_spot.</span></span><span class="sig-name descname"><span class="pre">report_spot_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.report_spot.report_spot_msg" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the reply to the key “Report”.
+Checks the message the user wants to report, and goes to the final step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>next state of the conversation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-modules.handlers.report_user">
+<span id="report-user"></span><h2>report_user<a class="headerlink" href="#module-modules.handlers.report_user" title="Permalink to this headline"></a></h2>
+<p>/report command</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.report_user.report_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_user.</span></span><span class="sig-name descname"><span class="pre">report_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.report_user.report_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the reply to the key “Report”.
 Checks the message the user wants to report</p>
 <dl class="field-list simple">
@@ -590,29 +524,27 @@ Checks the message the user wants to report</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.report_post">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">report_post</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.report_post" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handles the reply to the key “Report”.
-Checks the message the user wants to report, and goes to the final step</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
-<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+<dt class="sig sig-object py" id="modules.handlers.report_user.report_user_conv_handler">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_user.</span></span><span class="sig-name descname"><span class="pre">report_user_conv_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.ext.commandhandler.CommandHandler</span></span></span><a class="headerlink" href="#modules.handlers.report_user.report_user_conv_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the /report (user) conversation handler.
+The states are:</p>
+<ul class="simple">
+<li><p>reporting_user: submit the username to report. Expects text starting with &#64; and without spaces in between</p></li>
+<li><p>reporting_user_reason: submit the reason of the report. Expects text</p></li>
 </ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>conversaton handler</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>next state of the conversation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>CommandHandler</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.report_user_msg">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">report_user_msg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.report_user_msg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.report_user.report_user_msg">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_user.</span></span><span class="sig-name descname"><span class="pre">report_user_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.report_user.report_user_msg" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the reply to the /report command after sent the &#64;username.
 Checks the the user wants to report, and goes to ask the reason</p>
 <dl class="field-list simple">
@@ -632,8 +564,8 @@ Checks the the user wants to report, and goes to ask the reason</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.report_user_sent_msg">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">report_user_sent_msg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#modules.handlers.command_handlers.report_user_sent_msg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.report_user.report_user_sent_msg">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.report_user.</span></span><span class="sig-name descname"><span class="pre">report_user_sent_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.report_user.report_user_sent_msg" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the reply to the /report command after sent the reason.
 Checks the the user wants to report, and goes to final step</p>
 <dl class="field-list simple">
@@ -652,9 +584,13 @@ Checks the the user wants to report, and goes to final step</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.rules">
+<span id="rules"></span><h2>rules<a class="headerlink" href="#module-modules.handlers.rules" title="Permalink to this headline"></a></h2>
+<p>/rules command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.rules_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">rules_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.rules_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.rules.rules_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.rules.</span></span><span class="sig-name descname"><span class="pre">rules_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.rules.rules_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /rules command.
 Sends a message containing the rules</p>
 <dl class="field-list simple">
@@ -667,9 +603,13 @@ Sends a message containing the rules</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.sban">
+<span id="sban"></span><h2>sban<a class="headerlink" href="#module-modules.handlers.sban" title="Permalink to this headline"></a></h2>
+<p>/sban command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.sban_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">sban_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.sban_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.sban.sban_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.sban.</span></span><span class="sig-name descname"><span class="pre">sban_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.sban.sban_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /sban command.
 Sban a user by using this command and listing all the user_id to sban</p>
 <dl class="field-list simple">
@@ -682,9 +622,13 @@ Sban a user by using this command and listing all the user_id to sban</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.settings">
+<span id="settings"></span><h2>settings<a class="headerlink" href="#module-modules.handlers.settings" title="Permalink to this headline"></a></h2>
+<p>/settings command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.settings_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">settings_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.settings_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.settings.settings_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.settings.</span></span><span class="sig-name descname"><span class="pre">settings_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.settings.settings_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /settings command.
 Let’s the user choose whether his posts will be credited or not</p>
 <dl class="field-list simple">
@@ -697,9 +641,100 @@ Let’s the user choose whether his posts will be credited or not</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.spot">
+<span id="spot"></span><h2>spot<a class="headerlink" href="#module-modules.handlers.spot" title="Permalink to this headline"></a></h2>
+<p>/spot command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.start_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">start_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.start_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.spot.spot_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.spot.</span></span><span class="sig-name descname"><span class="pre">spot_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.spot.spot_cmd" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the /spot command.
+Checks that the user is in a private chat and it’s not banned and start the post conversation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>next state of the conversation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.spot.spot_confirm_query">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.spot.</span></span><span class="sig-name descname"><span class="pre">spot_confirm_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.spot.spot_confirm_query" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the [ submit | cancel ] callback.
+Creates the bid or cancels its creation.</p>
+<ul class="simple">
+<li><p>submit: saves the post as pending and sends it to the admins for them to check.</p></li>
+<li><p>cancel: cancels the current spot conversation</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>next state of the conversation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.spot.spot_conv_handler">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.spot.</span></span><span class="sig-name descname"><span class="pre">spot_conv_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">telegram.ext.commandhandler.CommandHandler</span></span></span><a class="headerlink" href="#modules.handlers.spot.spot_conv_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the spot conversation handler.
+The states are:</p>
+<ul class="simple">
+<li><p>posting: submit the spot. Expects text, photo or many other formats</p></li>
+<li><p>confirm: confirm or cancel the spot submission. Expects an inline query</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>conversaton handler</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.spot.spot_msg">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.spot.</span></span><span class="sig-name descname"><span class="pre">spot_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.handlers.spot.spot_msg" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the reply to the /spot command.
+Checks the message the user wants to post, and goes to the final step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>next state of the conversation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-modules.handlers.start">
+<span id="start"></span><h2>start<a class="headerlink" href="#module-modules.handlers.start" title="Permalink to this headline"></a></h2>
+<p>/start command</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.start.start_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.start.</span></span><span class="sig-name descname"><span class="pre">start_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.start.start_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /start command.
 Sends a welcoming message</p>
 <dl class="field-list simple">
@@ -712,9 +747,78 @@ Sends a welcoming message</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="module-modules.handlers.stats">
+<span id="stats"></span><h2>stats<a class="headerlink" href="#module-modules.handlers.stats" title="Permalink to this headline"></a></h2>
+<p>/stats command</p>
 <dl class="py function">
-<dt id="modules.handlers.command_handlers.stats_cmd">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.command_handlers.</span></code><code class="sig-name descname"><span class="pre">stats_cmd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.command_handlers.stats_cmd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="modules.handlers.stats.avg_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">avg_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#modules.handlers.stats.avg_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the avg_[ votes | 0 | 1 ] callback.
+Shows the average of the %arg per post</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ votes | 0 | 1 ]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text for the reply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.stats.close_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">close_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#modules.handlers.stats.close_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the close callback
+Closes the stats menu</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>text and replyMarkup that make up the reply</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.stats.max_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">max_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#modules.handlers.stats.max_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the max_[ votes | 0 | 1 ] callback
+Shows the post with the most %arg</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ votes | 0 | 1 ]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text for the reply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.stats.stats_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">stats_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.stats.stats_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Passes the stats callback to the correct handler</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.stats.stats_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">stats_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.stats.stats_cmd" title="Permalink to this definition"></a></dt>
 <dd><p>Handles the /stats command.
 Lets the user choose what stats they want to see</p>
 <dl class="field-list simple">
@@ -727,18 +831,20 @@ Lets the user choose what stats they want to see</p>
 </dl>
 </dd></dl>
 
-</section>
-<section id="module-modules.handlers.job_handlers">
-<span id="job-handlers"></span><h2>job_handlers<a class="headerlink" href="#module-modules.handlers.job_handlers" title="Permalink to this headline">¶</a></h2>
-<p>Scheduled jobs of the bot</p>
 <dl class="py function">
-<dt id="modules.handlers.job_handlers.clean_pending_job">
-<code class="sig-prename descclassname"><span class="pre">modules.handlers.job_handlers.</span></code><code class="sig-name descname"><span class="pre">clean_pending_job</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.job_handlers.clean_pending_job" title="Permalink to this definition">¶</a></dt>
-<dd><p>Job called each day at 05:00 utc.
-Automatically rejects all pending posts that are older than the chosen amount of hours</p>
+<dt class="sig sig-object py" id="modules.handlers.stats.tot_callback">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.stats.</span></span><span class="sig-name descname"><span class="pre">tot_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#modules.handlers.stats.tot_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the tot_[ posts | votes | 0 | 1 ] callback
+Shows the total number of %arg</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the jobqueue</p>
+<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – [ posts | votes | 0 | 1 ]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text for the reply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -748,50 +854,33 @@ Automatically rejects all pending posts that are older than the chosen amount of
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="modules.utils.html" class="btn btn-neutral float-right" title="Utils modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="modules.debug.html" class="btn btn-neutral float-left" title="Debug Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.utils.html" class="btn btn-neutral float-right" title="Utils modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Tend, drendog, alepiaz, Helias.
-
-    </p>
+    <p>&#169; Copyright 2021, Tend, drendog, alepiaz, Helias.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
